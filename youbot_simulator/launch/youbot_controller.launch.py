@@ -28,7 +28,7 @@ def generate_launch_description():
     # This spawner is activated unless trajectory_interface is true
     spawner_effort_controllers = Node(
         package='controller_manager',
-        executable='spawner',
+        executable='spawner.py',
         arguments=[
             'joint_state_broadcaster',
             'EffortJointInterface_J1_controller',
@@ -45,7 +45,7 @@ def generate_launch_description():
     # This spawner is activated only if trajectory_interface is true
     spawner_trajectory_controllers = Node(
         package='controller_manager',
-        executable='spawner',
+        executable='spawner.py',
         arguments=[
             'joint_state_broadcaster',
             'EffortJointInterface_trajectory_controller',
